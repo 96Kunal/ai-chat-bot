@@ -1,2 +1,21 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment files
+.env
+.env.local
+.env.*.local
 server/.env
-server/.env.example
+client/.env
+
+# Build outputs
+dist/
+build/
+out/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
