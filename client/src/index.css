@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#131314] text-[#f1f5f9] font-sans;
+    background-color: #131314;
+    color: #f1f5f9;
+  }
+}
+
+/* Gemini Signature Gradient Text */
+.gemini-gradient-text {
+  background: linear-gradient(74deg, #ea4335 0%, #9b72cb 35%, #4285f4 70%, #4285f4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Surface styling */
+.gemini-card {
+  background-color: #1e1f20;
+  border-radius: 1rem;
+  border: 1px solid #333538;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gemini-card:hover {
+  background-color: #282a2c;
+  border-color: #444746;
+}
+
+.gemini-pill {
+  background-color: #1e1f20;
+  border-radius: 9999px;
+  border: 1px solid #333538;
+}
+
+.gemini-input-pill {
+  background-color: #1e1f20;
+  border-radius: 1.75rem;
+  border: 1px solid #333538;
+  transition: all 0.2s ease;
+}
+
+.gemini-input-pill:focus-within {
+  background-color: #232527;
+  border-color: #ea4335;
+  box-shadow: 0 0 0 1px #ea4335;
+}
+
+/* Custom Minimal Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #37393b;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4e5052;
+}
+
+/* Clean High-Contrast Markdown */
+.markdown-body {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #f1f5f9;
+}
+.markdown-body h1 {
+  @apply text-xl font-semibold text-white mt-5 mb-2.5;
+}
+.markdown-body h2 {
+  @apply text-lg font-semibold text-white mt-4 mb-2;
+}
+.markdown-body h3 {
+  @apply text-base font-semibold text-[#e2e8f0] mt-3 mb-1.5;
+}
+.markdown-body p {
+  @apply mb-3.5 text-[#f1f5f9];
+}
+.markdown-body ul {
+  @apply list-disc list-outside pl-5 mb-3.5 space-y-1.5 text-[#f1f5f9];
+}
+.markdown-body ol {
+  @apply list-decimal list-outside pl-5 mb-3.5 space-y-1.5 text-[#f1f5f9];
+}
+.markdown-body li {
+  @apply leading-relaxed;
+}
+.markdown-body blockquote {
+  @apply border-l-2 border-[#ea4335] pl-4 py-1.5 my-3 bg-[#1e1f20] rounded-r-xl text-[#cbd5e1] italic;
+}
+.markdown-body strong {
+  @apply font-bold text-white;
+}
+.markdown-body code:not(pre code) {
+  @apply bg-[#282a2c] text-[#f8fafc] px-1.5 py-0.5 rounded-md text-xs font-mono border border-[#37393b];
+}
+.markdown-body pre {
+  @apply bg-[#1e1f20] border border-[#333538] rounded-2xl p-4 my-3.5 overflow-x-auto font-mono text-xs text-[#f8fafc] leading-relaxed shadow-lg;
+}
+.markdown-body table {
+  @apply w-full text-left border-collapse my-3.5 text-xs;
+}
+.markdown-body th {
+  @apply bg-[#282a2c] text-white p-3 border-b border-[#333538] font-semibold;
+}
+.markdown-body td {
+  @apply p-3 border-b border-[#282a2c] text-[#cbd5e1];
+}
